@@ -2,10 +2,10 @@ FROM node:lts
 
 EXPOSE 8000
 
-RUN useradd hoster --home /home/hoster
-WORKDIR /home/hoster
-RUN chown -R hoster /home/hoster
-USER hoster
+RUN useradd crumbl-hoster --home /home/crumbl-hoster
+WORKDIR /home/crumbl-hoster
+RUN chown -R crumbl-hoster /home/crumbl-hoster
+USER crumbl-hoster
 
 COPY . .
 RUN npm i

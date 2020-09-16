@@ -42,7 +42,7 @@ export default (collection: mongo.Collection<Crumbl>): HosterController => {
       insertCrumbl(collection, crumbl)
         .then(r => {
           if (r.result.n > 0) {
-            logger.info(`Crumbl recorded from ${req.ip}`) // TODO Use X-Miner-ID header instead to monitor activity
+            logger.info(`Crumbl recorded from ${req.ip}`) // TODO Use X-User-ID header instead to monitor activity
             res.status(201).send(crumbl.hasheredSrc)
           } else {
             res.sendStatus(500).end()

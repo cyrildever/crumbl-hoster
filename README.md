@@ -28,13 +28,13 @@ Running the application will write a 'crumbl-hoster.log' file.
 #### Production
 
 Change or adapt the following environment variables if need be:
-* `HTTP_PORT`: the HTTP port;
+* `HTTP_PORT`: the HTTP port number (default: 8000);
+* `MONGO_DOMAIN`: the MongoDB server name (default: localhost);
+* `MONGO_PORT`: the MongoDB port number (default: 27017);
+* `MONGO_DB`: the name of the MongoDB database (default: crumbl);
 * `MONGO_USERNAME`: the MongoDB username;
 * `MONGO_PASSWORD`: the MongoDB password for this username;
-* `MONGO_DOMAIN`: the MongoDB server name;
-* `MONGO_PORT`: the MongoDB port;
-* `MONGO_DB`: the name of the MongoDB database;
-* `MONGO_COLLECTION`: the name of the collection to use.
+* `MONGO_COLLECTION`: the name of the collection to use (default: hoster).
 
 
 ### API
