@@ -1,0 +1,61 @@
+{
+  "name": "crumbl-hoster",
+  "description": "Hoster server for the Crumbl platform",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "compile": "eslint src --ext .ts && tsc",
+    "fix": "eslint src --ext .ts --fix",
+    "start": "tsc && node ./dist/index.js"
+  },
+  "keywords": [
+    "crypto",
+    "cryptography",
+    "crumbl",
+    "data protection",
+    "secure storage",
+    "third-party",
+    "data masking"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyrildever/crumbl-hoster.git"
+  },
+  "author": "Cyril Dever <cdever@edgewhere>",
+  "license": "BSD-2-Clause-Patent",
+  "bugs": {
+    "url": "https://github.com/cyrildever/crumbl-hoster#issues"
+  },
+  "homepage": "https://github.com/cyrildever/crumbl-hoster#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "buffer-xor": "^2.0.2",
+    "compression": "^1.7.4",
+    "config": "^3.3.1",
+    "crumbl-js": "^5.0.7",
+    "ecies-geth": "^1.2.4",
+    "express": "^4.17.1",
+    "feistel-cipher": "^1.1.4",
+    "helmet": "^3.22.0",
+    "log4js": "^6.3.0",
+    "monet": "^0.9.1",
+    "mongodb": "^3.5.8",
+    "seedrandom": "3.0.5"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/config": "0.0.36",
+    "@types/express": "^4.17.6",
+    "@types/helmet": "0.0.45",
+    "@types/mongodb": "^3.5.20",
+    "@types/node": "^13.13.11",
+    "@typescript-eslint/eslint-plugin": "~2.21.0",
+    "@typescript-eslint/parser": "~2.21.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-immutable": "~1.0.0",
+    "eslint-plugin-no-loops": "~0.3.0",
+    "typescript": "~3.8.3"
+  }
+}

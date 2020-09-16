@@ -1,0 +1,10 @@
+http:
+  port: 8000
+
+mongo:
+  username: crumbl
+  password: crumbl
+  domain: localhost
+  port: 27017
+  db: crumbl
+  collection: hoster
