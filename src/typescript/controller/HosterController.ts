@@ -17,7 +17,7 @@ export default (collection: mongo.Collection<Crumbl>): HosterController => {
       collection
         .findOne({ hasheredSrc: req.query.hasheredSrc as string } as Crumbl, { projection: { _id: 0 } })
         .then(item => {
-          if (item == null) {
+          if (item === null) {
             res.sendStatus(404).end()
           } else {
             // TODO Record
