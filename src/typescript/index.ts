@@ -1,7 +1,6 @@
 import express from 'express'
 import helmet from 'helmet'
 import compression from 'compression'
-import bodyParser from 'body-parser'
 import config from 'config'
 import mongo, { Collection } from 'mongodb'
 import * as crumbljs from 'crumbl-js'
@@ -35,8 +34,8 @@ const main = async (): Promise<void> => {
   /* eslint-disable @typescript-eslint/restrict-template-expressions */
   express()
     .use(helmet(), compression())
-    .use(bodyParser.urlencoded({ extended: true }))
-    .use(bodyParser.text())
+    .use(express.urlencoded({ extended: true }))
+    .use(express.text())
     .use((req, _, next) => {
       if (req.method === 'POST') {
         try {
