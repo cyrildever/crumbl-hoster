@@ -6,3 +6,5 @@ test
 .DS_Store
 *.tgz
 crumbl-hoster.log
+cleanup
+cleanup.bat

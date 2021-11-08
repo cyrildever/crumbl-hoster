@@ -3,11 +3,12 @@ import helmet from 'helmet'
 import compression from 'compression'
 import bodyParser from 'body-parser'
 import config from 'config'
-import mongo from 'mongodb'
+import mongo, { Collection } from 'mongodb'
 import * as crumbljs from 'crumbl-js'
 
 import HosterController from './controller/HosterController'
 import { logger } from './utils/logger'
+import { Crumbl } from './model/Crumbl'
 
 const main = async (): Promise<void> => {
   logger.info('Starting hoster server...')
@@ -23,13 +24,15 @@ const main = async (): Promise<void> => {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  const collection = connection.db(mongoDB).collection(mongoCollection)
+  const collection: Collection<Crumbl> = connection.db(mongoDB).collection(mongoCollection)
   collection.stats()
     .then(stats => logger.info(`Hosting ${stats.count} crumbls in database`))
     .catch(err => logger.error(err))
 
   const hosterController = HosterController(collection)
   const port = config.get('http.port')
+
+  /* eslint-disable @typescript-eslint/restrict-template-expressions */
   express()
     .use(helmet(), compression())
     .use(bodyParser.urlencoded({ extended: true }))
@@ -37,6 +40,7 @@ const main = async (): Promise<void> => {
     .use((req, _, next) => {
       if (req.method === 'POST') {
         try {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           logger.info(`Receiving POST request for ${req.originalUrl} with body "${req.body.substring(0, crumbljs.DEFAULT_HASH_LENGTH)}[...]" from ${req.ip}`)
         } catch (e) {
           logger.warn(`Receiving invalid POST request for ${req.originalUrl} from ${req.ip}`)
@@ -50,6 +54,7 @@ const main = async (): Promise<void> => {
     .listen(port, () =>
       logger.info(`Listening at http://localhost:${port}/`)
     )
+  /* eslint-enable @typescript-eslint/restrict-template-expressions */
 }
 
 main().catch(err => logger.fatal(err))

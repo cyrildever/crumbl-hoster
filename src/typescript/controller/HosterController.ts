@@ -41,6 +41,7 @@ export default (collection: mongo.Collection<Crumbl>): HosterController => {
       const crumbl = maybeCrumbl.some()
       insertCrumbl(collection, crumbl)
         .then(r => {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
           if (r.result.n > 0) {
             logger.info(`Crumbl recorded from ${req.ip}`) // TODO Use X-User-ID header instead to monitor activity
             res.status(201).send(crumbl.hasheredSrc)
