@@ -2,7 +2,7 @@ import express from 'express'
 import helmet from 'helmet'
 import compression from 'compression'
 import config from 'config'
-import mongo, { Collection } from 'mongodb'
+import { Collection, MongoClient } from 'mongodb'
 import * as crumbljs from 'crumbl-js'
 
 import HosterController from './controller/HosterController'
@@ -19,10 +19,7 @@ const main = async (): Promise<void> => {
   const mongoDB = config.get<string>('mongo.db')
   const mongoCollection = config.get<string>('mongo.collection')
   const url = `mongodb://${mongoUserName}:${mongoPassword}@${mongoDomain}:${mongoPort}`
-  const connection = await mongo.connect(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  const connection = await MongoClient.connect(url)
   const collection: Collection<Crumbl> = connection.db(mongoDB).collection(mongoCollection)
   collection.stats()
     .then(stats => logger.info(`Hosting ${stats.count} crumbls in database`))

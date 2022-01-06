@@ -76,4 +76,4 @@ Please [contact me](mailto:cdever@edgewhere.fr) to get further information.
 
 
 <hr />
-&copy; 2020-2021 Cyril Dever. All rights reserved.
+&copy; 2020-2022 Cyril Dever. All rights reserved.

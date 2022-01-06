@@ -10,17 +10,17 @@ services:
       - 27017:27017
     volumes:
       - data-mongodb:/data/db
-    environment: 
+    environment:
       MONGO_INITDB_ROOT_USERNAME: crumbl
       MONGO_INITDB_ROOT_PASSWORD: crumbl
       MONGO_INITDB_DATABASE: crumbl
-  
+
   web:
     build: .
     restart: always
     hostname: hoster-api
     container_name: hoster-api
-    depends_on: 
+    depends_on:
       - mongodb
     ports:
       - 8000:8000
