@@ -72,7 +72,7 @@ It returns a `201` status code if success along with the verification hash strin
 
 ### License
 The use of the crumbl-hoster server is subject to fees for commercial purpose and to the respect of the [BSD2-Clause-Patent license](LICENSE).
-Please [contact me](mailto:cdever@edgewhere.fr) to get further information.
+Please [contact me](mailto:cdever@pep-s.com) to get further information.
 
 
 <hr />
