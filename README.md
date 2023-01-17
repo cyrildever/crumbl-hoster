@@ -76,4 +76,4 @@ Please [contact me](mailto:cdever@pep-s.com) to get further information.
 
 
 <hr />
-&copy; 2020-2022 Cyril Dever. All rights reserved.
+&copy; 2020-2023 Cyril Dever. All rights reserved.

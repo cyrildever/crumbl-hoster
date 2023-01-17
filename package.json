@@ -1,7 +1,7 @@
 {
   "name": "crumbl-hoster",
   "description": "Hoster server for the Crumbl platform",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -32,32 +32,32 @@
     "buffer-xor": "^2.0.2",
     "compression": "^1.7.4",
     "config": "^3.3.8",
-    "crumbl-js": "^6.2.9",
-    "ecies-geth": "^1.6.8",
+    "crumbl-js": "^6.2.10",
+    "ecies-geth": "^1.6.9",
     "express": "^4.18.2",
-    "feistel-cipher": "^1.4.2",
+    "feistel-cipher": "^1.4.3",
     "helmet": "^6.0.1",
     "log4js": "^6.7.1",
     "mongodb": "^4.13.0",
     "seedrandom": "3.0.5",
-    "ts-utls": "^1.5.11"
+    "ts-utls": "^1.5.12"
   },
   "peerDependencies": {
     "blakejs": "^1.2.1",
-    "keccak": "^3.0.2",
+    "keccak": "^3.0.3",
     "sha3": "^2.1.4"
   },
   "devDependencies": {
     "@types/compression": "^1.7.2",
     "@types/config": "3.3.0",
     "@types/express": "^4.17.15",
-    "@types/node": "18.11.17",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
+    "@types/node": "18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
     "blakejs": "^1.2.1",
-    "eslint": "^8.30.0",
+    "eslint": "^8.32.0",
     "eslint-plugin-no-loops": "~0.3.0",
-    "keccak": "^3.0.2",
+    "keccak": "^3.0.3",
     "sha3": "^2.1.4",
     "typescript": "^4.9.4"
   }
