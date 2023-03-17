@@ -7,7 +7,7 @@ _Easy hosting server for the Crumbl&trade; platform_
 ![Github issues](https://img.shields.io/github/issues/cyrildever/crumbl-hoster)
 ![NPM](https://img.shields.io/npm/l/crumbl-hoster)
 
-This application is an simple hosting service for the Crumbl&trade; technology patented by Cyril Dever.
+This application is a simple hosting service for the Crumbl&trade; technology patented by Cyril Dever.
 
 ### Usage
 
