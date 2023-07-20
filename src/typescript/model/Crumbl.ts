@@ -6,6 +6,7 @@ export interface Crumbl {
   crumbled: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 export const insertCrumbl = (collection: mongo.Collection<Crumbl | any>, c: Crumbl): Promise<any> =>
   collection
     .updateOne({ hasheredSrc: c.hasheredSrc }, { $set: { crumbled: c.crumbled } }, { upsert: true })
