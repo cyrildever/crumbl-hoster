@@ -8,3 +8,5 @@ test
 crumbl-hoster.log
 cleanup
 cleanup.bat
+docker-compose.yml
+Dockerfile
