@@ -38,7 +38,7 @@ const main = async (): Promise<void> => {
         try {
           // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           logger.info(`Receiving POST request for ${req.originalUrl} with body "${req.body.substring(0, crumbljs.DEFAULT_HASH_LENGTH)}[...]" from ${req.ip}`)
-        } catch (e) {
+        } catch (_) { // eslint-disable-line @typescript-eslint/no-unused-vars
           logger.warn(`Receiving invalid POST request for ${req.originalUrl} from ${req.ip}`)
         }
       } else {
